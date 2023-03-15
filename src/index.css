@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,700;0,900;1,200;1,300;1,400;1,700&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Play:wght@400;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,700;0,900;1,200;1,300;1,400;1,700&family=Roboto&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --clr-columbia-blue: #B7D1DA;
+  --clr-cards: #E2E8DD;
+  --clr-gray: #95A3A4;
+  --clr-ebony: #697268;
+  --clr-ebony2: #4E5340;
+  --clr-black: #181823;
+}
+
+* {
+  font: 'Inter', sans-serif;
+  box-sizing: content-box;
+  overflow: hidden;
+}
+
+html,body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-black);
+}
+
+.heading {
+  background-color: black;
+  color: var(--clr-columbia-blue);
+  font-size: 24px;
+  font-weight: 900;
+  text-align: center;
+  text-shadow: 2px 2px 2px #635985;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.info {
+  font-family: 'Play';
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  padding-left: 3rem;
+  font-size: 30px;
+  color: var(--clr-ebony2);
+}
+.info > p {
+  display: inline-block;
+  text-align: center;
+}
+
+.miniInfo {
+  font-family: 'Play';
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.miniInfo > p {
+  text-align: center
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+.card {
+  border-radius: 10px;
+  background-color: var(--clr-cards);
+  padding-right: 2rem;
+  border: #227C70 3px solid;
+  width: 50%;
+  height: 50vh;
+}
+
+.card:hover, .miniCard:hover {
+  
+  box-shadow: 2px 2px 2px 2px #472183;
+}
+
+.miniCard:hover {
+  background: #227C70;
+}
+
+.miniCard {
+  background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color: var(--clr-cards);  
+font: 24px 100;
+  border-radius: 10px;
+  border: #227C70 3px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: var(--clr-cards); */
+  padding: 2 rem;
+  width: 30%;
+  height: 20vh;
+}
+
