@@ -6,7 +6,7 @@ const Header = () => {
     <div className='heading flex justify-around p-2'>
       
       <p className='flex pb-1 pt-1'>
-        <img src={logo} alt="logo" width="16px" style={{"marginRight": "8px"}}/>SmartCrop Management System</p>
+        <img src={logo} alt="logo" width="22px" style={{"marginRight": "8px"}}/>SmartCrop Management System</p>
         
     </div>
   )
