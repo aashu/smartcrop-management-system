@@ -1,5 +1,9 @@
 
 
+function formatDate(fDate) {
+    const date = new Date(fDate)
+    return `${date.getDate()}/${date.getMonth() +1 } ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+}
 
 export default function(data) {
     const feeds = data.feeds;
@@ -44,10 +48,10 @@ export default function(data) {
             
         ]
     };
-    // entry["created_at"]
+    
     feeds.map((entry, idx) => {
-        finalObj.cards[0].data.push({time: entry["created_at"], temperature: entry["field1"] == "nan" ? 0 : parseFloat(entry["field1"])})
-        finalObj.cards[1].data.push({time: entry["created_at"], humidity: entry["field2"] == "nan" ? 0 : parseFloat(entry["field2"])})
+        finalObj.cards[0].data.push({time: formatDate(entry["created_at"]), temperature: entry["field1"] == "nan" ? 0 : parseFloat(entry["field1"])})
+        finalObj.cards[1].data.push({time: formatDate(entry["created_at"]), humidity: entry["field2"] == "nan" ? 0 : parseFloat(entry["field2"])})
     })
 
     const latestFeed = feeds[feeds.length - 1]

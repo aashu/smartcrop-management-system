@@ -10,7 +10,7 @@ const Chart = ({xDataKey, yDataKey, data  = []}) => {
       <XAxis dataKey={xDataKey}/>
       <YAxis/>
       <Tooltip formatter={(value, name, props) => [`${parseFloat(value.toFixed(2))}`,`${name.toUpperCase()}`]}
-        labelFormatter={(value, name, props)=> `Time: ${value}:00`}
+        labelFormatter={(value, name, props)=> `Time: ${value}`}
       />
     </LineChart>
     </ResponsiveContainer>

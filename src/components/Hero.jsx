@@ -9,7 +9,7 @@ const Hero = () => {
  const [error, setError] = useState(null);
   useEffect(() => {
       const updateData = () => {
-        fetch("https://api.thingspeak.com/channels/2062334/feed.json?results=24")
+        fetch("https://api.thingspeak.com/channels/2062334/feed.json?results=24&timezone=Asia%2FKolkata")
       .then((response) => {
         return response.json();
       })
